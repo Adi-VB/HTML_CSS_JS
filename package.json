@@ -1,0 +1,19 @@
+{
+  "name": "jsproject",
+  "version": "1.0.0",
+  "description": "Command line arguments",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "Adi": "bash script.sh",
+    "run": " node even_odd.js",
+    "run1":"node fizzbuzz.js",
+    "runeven": "node even_odd.js",
+    "runpos": "node pos_neg.js"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
