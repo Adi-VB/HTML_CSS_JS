@@ -3,7 +3,7 @@ function posneg(n) {
     var n = readlineSync.question("Enter the number: ");
     if (n < 0) {
         console.log("The given number is negative");
-    } else if (n > 0) {
+    } else if (n >= 0) {
         console.log("The given number is Positive!!!");
     } else {
         console.log("Enter a Valid Number!!!!")
