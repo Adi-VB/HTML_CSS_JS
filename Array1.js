@@ -1,11 +1,35 @@
 var readlineSync = require('readline-sync');
 
-function arrsum(a) {
+function q() {
     var s = [];
-    var n = readlineSync.question("Enter an Element: ")
-    for (i=0 ; i<s.length; i++){
-        s[i] = s.push(n);
-        console.log(s)
+    var n = readlineSync.question("Enter the length of the array: ");
+    switch (n % 1) {
+        case (0):
+            for (let i = 0; i < n; i++) {
+                var e = readlineSync.question("Enter the element: ");
+                if (e % 1 == 0) {
+                    s.push(Number(e));
+                } else {
+                    s.push(e);
+                }
+            }
+            console.log("your array is: ");
+            console.log(s);
+            var yon = readlineSync.question("Get your sum y/n: ");
+            switch (yon) {
+                case ("y"):
+                const sum = s.reduce((total, value) => (total) + (value));
+                console.log("The Sum of your Array elements is : " + sum);
+                break;
+                case ("n"):
+                console.log("have a nice day!!!");
+                break;
+            }
+            break;
+        default:
+            console.log("Enter a Valid length");
+            q();
+            break;
     }
 }
-arrsum();
+q();
