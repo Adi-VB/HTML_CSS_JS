@@ -8,6 +8,7 @@ var ascii = {
     E: 69,
     O: 79,
     ' ': 32
+
 }
 var mystring = readlineSync.question("Enter your string: ");
 var myarray = mystring.split("");
@@ -20,25 +21,21 @@ for (let i = 0; i < myarray.length; i++) {
         }
     }
 }
-console.log("your ASCII equivalent of array is: ");
+console.log("your ASCII equivalent is: ");
 console.log(newarray);
-var arr = [];
+
 for (let j = 0; j < newarray.length; j++) {
-    var str = binary(newarray[j]);
-    var strrev = str.split("").reverse();
-    for (k = 0; k < strrev.length; k++) {
-        if (strrev.length < 8){
-            strrev.push(0);
-        }
-    }
-    var newstr = strrev.reverse().join("");
-    arr.push(newstr);
-    arr.join("");
+    binary(newarray[j]);
 }
-console.log("The binary of the string is : " + arr);
 
 
 function binary(num) {
-    var B = parseInt(num, 10);
-    return B.toString(2);
+    if (num == 0) {
+        return 1;
+    } else {
+        n = Math.floor(num % 2);
+        console.log(n);  
+        binary(num / 2);
+    }
 }
+
