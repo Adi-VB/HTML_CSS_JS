@@ -1,7 +1,7 @@
 function posneg(n) {
     var readlineSync = require('readline-sync');
     var n = readlineSync.question("Enter the number: ");
-    if (n < 0) {
+    if (n <= 0) {
         console.log("The given number is negative");
     } else if (n >= 0) {
         console.log("The given number is Positive!!!");
