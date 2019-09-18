@@ -1,15 +1,7 @@
 var readlineSync = require('readline-sync');
-
-var ascii = {
-    A: 65,
-    B: 66,
-    C: 67,
-    D: 68,
-    E: 69,
-    O: 79,
-    ' ': 32
-
-}
+var arr2 = [];
+var arr = "";
+var ascii = require('./Algo1');
 var mystring = readlineSync.question("Enter your string: ");
 var myarray = mystring.split("");
 var newarray = [];
@@ -25,17 +17,20 @@ console.log("your ASCII equivalent is: ");
 console.log(newarray);
 
 for (let j = 0; j < newarray.length; j++) {
-    binary(newarray[j]);
+    tobinary(newarray[j]);
 }
-
-
-function binary(num) {
-    if (num == 0) {
-        return 1;
+function tobinary(num){
+    if (num == 1) {
+        arr = arr + (num);
+        do {
+            arr = arr + "0";
+        } while (arr.length < 8);
+        arr2.push(arr.split("").reverse().join(""));
+        arr = "";
+        return;
     } else {
-        n = Math.floor(num % 2);
-        console.log(n);  
-        binary(num / 2);
+       arr = arr + (num % 2);
+        tobinary(Math.floor(num / 2));
     }
 }
-
+console.log(arr2);

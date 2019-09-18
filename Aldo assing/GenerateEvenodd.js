@@ -6,7 +6,7 @@ function EAO(N) {
     var E1 = [];
     var O1 = [];
     var N = readlineSync.question("Enter the number: ");
-    for (let i = 1; i < N; i++) {
+    for (let i = 0; i < N; i++) {
         if (i % 1 == 0) {
             if (i % 2 == 0) {
                 E.push(i);
@@ -23,7 +23,7 @@ function EAO(N) {
 
     function EAO1(M) {
         var M = N * 2;
-        for (let j = 1; j <= M; j++) {
+        for (let j = 0; j < M; j++) {
             if (j % 2 == 0) {
                 E1.push(j)
             } else {
