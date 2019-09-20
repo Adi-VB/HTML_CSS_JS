@@ -1,13 +1,14 @@
 var readlineSync = require('readline-sync');
 
 var arr = [];
+var arr2 = [];
 var temp;
 
 function array() {
     var N = readlineSync.question("Enter the length of array: ");
     if (N % 1 == 0) {
-        for (let n = 0; n < N; n++) {
-            ele(n);
+        for (let i = 0; i < N; i++) {
+            ele(i);
         }
         console.log(arr);
     }else{
@@ -15,7 +16,9 @@ function array() {
         sumarray();
     }
     for (let i = 0; i < arr.length; i++) {
-        arr[i] 
+        temp = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length -1 - i] = temp;
     }
     console.log(arr);
 }
