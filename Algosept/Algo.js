@@ -1,4 +1,4 @@
-var readlineSync = require('readline-sync');
+var readlineSync = require('./node_modules/readline-sync');
 var arr2 = [];
 var arr = "";
 var ascii = require('./Algo1');

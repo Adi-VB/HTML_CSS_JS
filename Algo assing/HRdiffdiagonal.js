@@ -11,7 +11,5 @@ function diff() {
             arr.push(e);
         }        
     }
-    arrs.push(arr);
-    console.log(arrs);
 }
 diff();
