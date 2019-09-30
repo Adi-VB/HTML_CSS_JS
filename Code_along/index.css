@@ -1,0 +1,38 @@
+body {
+    background-color: darkgray;
+  }
+  h1 {
+    text-align: center;
+  }
+  .battery:after {
+    background-color: none;
+    border: 2px solid #000;
+    content: "";
+    display: block;
+    height: 16px;
+    position: absolute;
+    right: -6px;
+    top: 6px;
+    width: 6px;
+  }
+  .battery {
+    /* background-color: none; */
+    border: 2px solid #000;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100px;
+  }
+  .battery.full {
+    background-color: #666;
+  }
+  .battery.high {
+    background-color: #66CD00;
+  }
+  .battery.medium {
+    background-color: #FCD116;
+  }
+  .battery.low {
+    background-color: #FF3333;
+  }
