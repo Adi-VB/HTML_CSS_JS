@@ -28,6 +28,13 @@
 //     console.log ('Hi! I\'m ' + this.name.fname + '.');
 // }
 
+// function Instructer(fname, lname, age, gender, exp){
+//     Bootcamper.call(this, fname, lname, age, gender, exp)
+//     this.exp = exp;
+// }
+// var adi = new Instructer("prash", "teja", 24, "M", 1);
+// console.log(adi);
+
 // class Bootcamper {
 //     constructor(fname, lname, age, gender) {
 //         this.name = {
@@ -60,3 +67,53 @@
 
 //function expression
 // iife = immediate invoked function express
+
+// function abc(){
+//     console.log(arguments);
+// }
+// abc(1,2);
+
+// console.log(arguments.length);
+
+//Sync - one step at atime - blocking
+//Async - nonblocking
+
+// function one()
+// {
+//     console.log("One");
+// }
+// function two() {
+//     console.log("Two");
+// }
+// function three(){
+//     console.log("Three");
+// }
+// one();
+// setTimeout(two,2000);
+// three();
+
+// var a = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+// var b = [];
+
+// for (let i = 0; i < a.length; i++) {
+//     if (prime(a[i]) == true) {
+//         b.push(a[i])
+//     }
+// }
+// console.log(b)
+
+// function prime(x) {
+//     let factor = 0;
+//     for (let j = 2; j <= x; j++) {
+//         if (x % j == 0) {
+//             factor++;
+//         }
+//     }
+//     if (factor == 1) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+//node fs module
