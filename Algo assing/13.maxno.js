@@ -46,6 +46,6 @@ function maxarray() {
 maxarray();
 
 function ele(n) {
-    var n = readlineSync.question("Enter element: ");
+    var n = Number(readlineSync.question("Enter element: "));
     arr.push(n);
 }

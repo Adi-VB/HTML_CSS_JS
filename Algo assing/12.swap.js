@@ -1,5 +1,6 @@
 var readlineSync = require('readline-sync');
-
+var b = [], bjoin, bnew, b1;
+var a = [], ajoin, anew, a1;
 function swap() {
     swap1()
     swap2();
@@ -9,31 +10,14 @@ function swap() {
             anew = ajoin.replace(ajoin, bjoin);
 
             console.log("The Elements of your array a = [] now is: ");
-            a = anew.split("");
-            for (var i = 0; i < a.length; i++) {
-                k = a[i];
-                if (k % 1 == 0) {
-                    a[i] = +a[i];
-                    return a;
-                } else {
-                    return a;
-                }
-            }
-            console.log(a)
+            a1 = anew.split("");
+            console.log(a1)
+
             bnew = bjoin.replace(bjoin, ajoin);
 
             console.log("The Elements of your array b = [] now is: ");
-            b = bnew.split("");
-            for (var j = 0; j < b.length; j++) {
-                l = b[j];
-                if (l % 1 == 0) {
-                    b[j] = +b[j];
-                    return b;
-                } else {
-                    return b;
-                }
-            }
-            console.log(b);
+            b1 = bnew.split("");
+            console.log(b1);
             break;
         case ("n"):
             console.log("Have a good day!!!");
@@ -43,8 +27,8 @@ function swap() {
 
 swap();
 
+
 function swap1() {
-    var a = [];
     var n = readlineSync.question("Enter the length of the array a : ");
     switch (n % 1) {
         case (0):
@@ -67,8 +51,8 @@ function swap1() {
     }
 }
 
+
 function swap2() {
-    var b = [];
     var m = readlineSync.question("Enter the length of 2nd Array: ");
     switch (m % 1) {
         case (0):
