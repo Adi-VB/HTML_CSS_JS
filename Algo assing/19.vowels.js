@@ -9,6 +9,11 @@ function vowels() {
             case "i":
             case "o":
             case "u":
+            case "A":
+            case "E":
+            case "I":
+            case "O":
+            case "U":
                 console.log("Its a vowel")
                 break;
 

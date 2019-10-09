@@ -1,53 +1,26 @@
-var readlineSync = require('readline-sync');
+// var readlineSync = require('readline-sync');
 
+// var N = readlineSync.question("Enter the order of the NxN matrix: ");
+
+var M1 = [[2,3,4],[4,5,5],[3,2,1]]
+var M2 = [[1,2,2],[7,8,5],[9,7,4]]
 var arr = [];
-var arr1 = [];
-var arr3 = [];
-var arr4 = [];
-
-function mat(N) {
-    var N = readlineSync.question("Enter the Order of the matrix NxN: ")
-    console.log("Enter the elements of the 1st matrix: ")
-    for (let i = 0; i < N; i++) {
-        for (let j = 0; j < N; j++) {
-            matele();
-        }
+function add_sub() {
+    if (M1[0].length == M2[0].length && M1.length == M2.length) {
+        console.log("Addition and subtractions are possible")
+        add();
+    }else{
+        console.log("Add and sub are not possible")
     }
-    console.log(arr);
-    console.log("Enter the elements of 2nd matrix: ")
-    for (let k = 0; k < N; k++) {
-        for (let l = 0; l < N; l++) {
-            matele1();
-        }
-    }
-    console.log(arr1);
-    for (let x = 0; x < arr.length; x++) {
-        for (let y = 0; y < arr1.length; y++) {
-            if (x == y) {
-                c = Number(arr[x]) + Number(arr1[y]);
-                arr3.push(c);
-            }
-        }
-    }
-    for (let x = 0; x < arr.length; x++) {
-        for (let y = 0; y < arr1.length; y++) {
-            if (x == y) {
-                c = Number(arr[x]) - Number(arr1[y]);
-                arr4.push(c);
-            }
-        }
-    }
-    console.log(arr4);
-    console.log(arr3);
 }
-mat();
+add_sub();
 
-function matele(x) {
-    var x = readlineSync.question("Enter the element: ");
-    arr.push(x);
-}
-
-function matele1(y) {
-    var y = readlineSync.question("Enter the element: ");
-    arr1.push(y);
+function add() {
+    for (let i = 0; i < M1.length; i++) {
+        for (let j = 0; j < M1[i].length; j++) {
+            var M = M1[i][j] + M2[i][j]
+            arr.push(M)
+        }
+    }
+    console.log(arr)
 }
