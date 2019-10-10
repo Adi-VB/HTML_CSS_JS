@@ -7,13 +7,14 @@
     "start": "node index.js",
     "Adi": "bash script.sh",
     "run": " node even_odd.js",
-    "run1":"node fizzbuzz.js",
+    "run1": "node fizzbuzz.js",
     "runeven": "node even_odd.js",
     "runpos": "node pos_neg.js"
   },
   "author": "Aditya",
   "license": "ISC",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "yargs": "^14.2.0"
   }
 }

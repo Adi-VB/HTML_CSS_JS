@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+
+<body>
+    <form id="sub" onsubmit="ons()">
+        <input type="text" id="myInput" oninput="myFunction()">
+        <input type="submit">
+    </form>
+    <button onclick="onc()">Click me</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput").value;
+            document.getElementById("demo").innerHTML = "You wrote: " + x;
+        }
+
+        function ons() {
+            var y = document.getElementById("myInput").value;
+            document.getElementById("demo1").innerHTML = "Submit value: " + y;
+        }
+
+        function onc() {
+            var z = document.getElementById("myInput").value;
+            document.getElementById("demo2").innerHTML = "Click value: " + z;
+        }
+        document.getElementById("sub").addEventListener("submit", function (event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
