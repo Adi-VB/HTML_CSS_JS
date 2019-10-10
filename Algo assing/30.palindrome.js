@@ -14,5 +14,3 @@ console.log(str);
 var a = str.split("").reverse().join("");
 
 console.log(a);
-
-
