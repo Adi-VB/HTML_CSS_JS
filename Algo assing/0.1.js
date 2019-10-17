@@ -23,14 +23,17 @@ for (let k = 0; k < M; k++) {
 }
 console.log(arr2);
 
+let a = addMatrice(arr2[0], arr2[1])
+    for (let i = 2; i < arr2.length; i++) {
+        a = addMatrice(a, arr2[i])
+    }
+
 const addMatrice = () => {
 
-    arr2.map((e, index) => {
+    arr1.map((e, index) => {
         result.push(
             e.map((x, index2) => x + arr1[index][index2])
         )
     })
     console.log('sum ->', result)
 }
-
-addMatrice()

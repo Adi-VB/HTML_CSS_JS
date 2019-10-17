@@ -12,28 +12,28 @@
 // const Khalil = new Bootcamper("Khalil", "Ali", "Bherain", 25);
 // console.log(Khalil)
 
-// function Bootcamper(fname, lname, age, gender){
-//     this.name = {
-//         fname,
-//         lname
-//     }
-//     this .age = age;
-//     this.gender = gender;
-// }
+function Bootcamper(fname, lname, age, gender){
+    this.name = {
+        fname,
+        lname
+    }
+    this .age = age;
+    this.gender = gender;
+}
 
-// var adi = new Bootcamper("Aditya", "Ballurkar", 44, "M");
-// console.log(adi);
+var adi = new Bootcamper("Aditya", "Ballurkar", 44, "M");
+console.log(adi);
 
-// Bootcamper.prototype.greeting = function(){
-//     console.log ('Hi! I\'m ' + this.name.fname + '.');
-// }
+Bootcamper.prototype.greeting = function(){
+    console.log ('Hi! I\'m ' + this.name.fname + '.');
+}
 
-// function Instructer(fname, lname, age, gender, exp){
-//     Bootcamper.call(this, fname, lname, age, gender, exp)
-//     this.exp = exp;
-// }
-// var adi = new Instructer("prash", "teja", 24, "M", 1);
-// console.log(adi);
+function Instructer(fname, lname, age, gender, exp){
+    Bootcamper.call(this, fname, lname, age, gender, exp)
+    this.exp = exp;
+}
+var adi = new Instructer("prash", "teja", 24, "M", 1);
+console.log(adi);
 
 // class Bootcamper {
 //     constructor(fname, lname, age, gender) {
@@ -64,6 +64,28 @@
 // console.log(adi);
 // adi.greeting();
 // console.log(adi.abc(10,10));
+
+function Person(first, last, age, gender, interests) {
+    this.name = {
+        first: first,
+        last: last
+    };
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+    this.bio = function () {
+        console.log(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    };
+    this.greeting = function () {
+        console.log('Hi! I\'m ' + this.name.first + '.');
+    };
+}
+
+const person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing','painting']);
+
+console.log(person1['age'])
+console.log(person1.interests)
+console.log(person1.bio())
 
 //function expression
 // iife = immediate invoked function express
