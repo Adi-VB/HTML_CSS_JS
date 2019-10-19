@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendar</title>
+</head>
+
+<body>
+    <h3 id="month-heading"></h3>
+    <h3 id="year-heading"></h3>
+    <table id="month-table-id" border="1" width="30%" height="200px">
+    </table><br>
+    <button type="button" onclick="onclickprev()">Previous</button>
+    <select name="select1" id="month-select">
+        <option disabled selected value id="none-1"> -- select an option -- </option>
+        <option value="00">Jan</option>
+        <option value="01">Feb</option>
+        <option value="02">Mar</option>
+        <option value="03">Apr</option>
+        <option value="04">May</option>
+        <option value="05">Jun</option>
+        <option value="06">Jul</option>
+        <option value="07">Aug</option>
+        <option value="08">Sep</option>
+        <option value="09">Oct</option>
+        <option value="10">Nov</option>
+        <option value="11">Dec</option>
+    </select>
+    <select name="select2" id="year-select">
+        <option disabled selected value id="none-2"> -- select an option -- </option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+    </select>
+    <button type="button" onclick="onclicknext()">Next</button>
+</body>
+<script src="script.js"></script>
+
+</html>
